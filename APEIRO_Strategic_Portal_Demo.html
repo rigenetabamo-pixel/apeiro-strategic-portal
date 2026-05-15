@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>APEIRO Fitness Hub Portal</title>
+    <style>
+        body { font-family: Arial; margin: 0; background: #f2f2f2; }
+        .login, .dashboard { max-width: 800px; margin: auto; padding: 20px; background: white; margin-top: 50px; border-radius: 10px; }
+        input { display: block; width: 100%; padding: 10px; margin: 10px 0; }
+        button { padding: 10px; width: 100%; background: green; color: white; border: none; }
+        .hidden { display: none; }
+        .header { background: #1e7a4c; color: white; padding: 15px; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    APEIRO Group Australia Strategic Development Portal (2024–2027)
+</div>
+
+<div class="login" id="loginBox">
+    <h2>Login</h2>
+    <input type="text" id="user" placeholder="Username">
+    <input type="password" id="pass" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p><b>Demo Login:</b> admin / admin123</p>
+</div>
+
+<div class="dashboard hidden" id="dashboard">
+    <h2>Strategic Development Plan 2024–2027</h2>
+    <p><b>Organisation:</b> APEIRO Group Australia</p>
+
+    <h3>Key Focus Areas</h3>
+    <ul>
+        <li>Increase community fitness participation</li>
+        <li>Improve operational efficiency</li>
+        <li>Enhance service quality</li>
+        <li>Expand fitness facilities and programs</li>
+    </ul>
+
+    <h3>Business Objectives</h3>
+    <p>1. Increase membership by 20% and retention by 15% within 12 months.</p>
+    <p>2. Reduce operational issues by 25% and achieve 90% customer satisfaction.</p>
+
+    <h3>Business Values</h3>
+    <p>Inclusivity, Excellence</p>
+</div>
+
+<script>
+function login() {
+    var u = document.getElementById('user').value;
+    var p = document.getElementById('pass').value;
+
+    if(u === "admin" && p === "admin123") {
+        document.getElementById('loginBox').style.display = "none";
+        document.getElementById('dashboard').classList.remove("hidden");
+    } else {
+        alert("Invalid login");
+    }
+}
+</script>
+
+</body>
+</html>
